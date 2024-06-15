@@ -10,7 +10,6 @@ import CandidateAssessment from "./candidate-assessment";
 import AssessmentModal from "../modals/assessment-modal";
 
 const CandidateDetails = () => {
-  // State to manage the active tab (summary or video)
   const [activeTab, setActiveTab] = useState<
     "details" | "pitch" | "assessment"
   >(() => {

@@ -34,6 +34,18 @@ import pdf2 from "@assets/Vector (3) - Copy.svg"
 import reject from "@assets/Vectorreject.svg"
 import approved from "@assets/approved.svg"
 import recorded from "@assets/recorded.svg"
+import configUser from "@assets/Vectoruser.svg"
+import configUsergroup from "@assets/Vectorusergroup.svg"
+import configarrow from "@assets/Vectorrowright.svg"
+import configdoc from "@assets/Vectordoc.svg"
+import leftarrow from "@assets/chevron2 - Copy.svg"
+import avatar1 from "@assets/avatar1.svg"
+import avatar2 from "@assets/avatar2.svg"
+import avatar3 from "@assets/avatar3.svg"
+import avatar4 from "@assets/avatar4.svg"
+import avatar5 from "@assets/avatar5.svg"
+import redcross from "@assets/redcross.svg"
+import greentick from "@assets/greenTick.svg"
 
 
 export {
@@ -72,5 +84,17 @@ export {
   pdf2,
   reject,
   approved,
-  recorded
+  recorded,
+  configUser,
+  configUsergroup,
+  configarrow,
+  configdoc,
+  leftarrow,
+  avatar1,
+  avatar2,
+  avatar3,
+  avatar4,
+  avatar5,
+  redcross,
+  greentick
 };

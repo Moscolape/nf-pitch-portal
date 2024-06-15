@@ -120,7 +120,7 @@ const PitchList = () => {
                   />
                   {pitch.nameOfCandidate}
                 </span>
-                <div className="flex w-[26%]">{pitch.pitchTitle}</div>
+                <div className="flex text-h12 w-[26%]">{pitch.pitchTitle}</div>
                 <span className="block w-[12%] text-h12 text-gray-1 font-normal">
                   {pitch.industry}
                 </span>
