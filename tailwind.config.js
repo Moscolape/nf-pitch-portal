@@ -17,11 +17,22 @@ export default {
         primary :{
           DEFAULT: '#216745',
           bordered: '#B2B7B6',
+          sidebar: '#123926',
+          dark: '#0E2B1D',
+          bg: '#F7FCFA',
+          1: '#4D856A'
         },
         main: {
           1: '#1F2937',
           2: '#798181',
-          3: '#3E4645'
+          3: '#3E4645',
+          4: '#586261',
+          5: '#303635'
+        },
+        accented: {
+          1: '#DFDB04',
+          2: '#5E5C02',
+          3: '#33BE73'
         }
       },
       fontSize: {

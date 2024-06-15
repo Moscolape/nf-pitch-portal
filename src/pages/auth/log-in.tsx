@@ -76,11 +76,12 @@ const Login = () => {
             </div>
           </div>
         </div>
-        <button
-          type="submit"
-          className="flex items-center justify-center hover:bg-primary bg-primary text-white py-3 w-full rounded-full mt-5 text-h11 cursor-pointer"
-        >
-          {/* {loading ? (
+        <Link to="/dashboard">
+          <button
+            type="submit"
+            className="flex items-center justify-center hover:bg-primary-dark bg-primary text-white py-3 w-full rounded-full mt-5 text-h11 cursor-pointer"
+          >
+            {/* {loading ? (
             <Spinner
               size="md"
               color="white"
@@ -89,10 +90,11 @@ const Login = () => {
               speed="0.8s"
             />
           ) : ( */}
-          <span className="mr-3 font-medium font-DM-Sans">Login</span>
-          <img src={arrowLogin} alt="" className="scale-110 mt-1" />
-          {/* )} */}
-        </button>
+            <span className="mr-3 font-medium font-DM-Sans">Login</span>
+            <img src={arrowLogin} alt="" className="scale-110 mt-1" />
+            {/* )} */}
+          </button>
+        </Link>
         <div className="mt-3 font-DM-Sans">
           <span className="text-main-2 text-h12">New User?</span>
           <Link to="/create-account">
