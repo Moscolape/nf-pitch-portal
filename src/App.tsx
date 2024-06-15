@@ -17,6 +17,9 @@ const Pitch = lazy(() => import('@pages/main/pitch'));
 const Survey = lazy(() => import('@pages/main/survey'));
 const Reports = lazy(() => import('@pages/main/reports'));
 
+// extra pages
+const CandidateDetails = lazy(() => import('@components/pitch-components/candidates'))
+
 
 function App() {
   return (
@@ -36,6 +39,9 @@ function App() {
             <Route path="/pitch" element={<Pitch />} />
             <Route path="/survey" element={<Survey />} />
             <Route path="/reports" element={<Reports />} />
+
+            {/* Extra Routes */}
+            <Route path="/pitch/candidate/:id" element={<CandidateDetails />} />
           </Routes>
         </div>
       </Router>

@@ -28,7 +28,9 @@ export default {
           3: '#3E4645',
           4: '#586261',
           5: '#303635',
-          6: '#CBCECE'
+          6: '#CBCECE',
+          7: '#F3F4F6',
+          8: '#F8FAFC'
         },
         accented: {
           1: '#DFDB04',

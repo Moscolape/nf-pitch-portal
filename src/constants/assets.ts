@@ -25,6 +25,15 @@ import checked from "@assets/Vectorchecked.svg"
 import cancelled from "@assets/Vectorcancelled.svg"
 import add from "@assets/Vectoradd.svg"
 import chevron2 from "@assets/chevron2.svg"
+import iconhorizon from "@assets/more-horizontal-circle-01 (1).svg"
+import upload from "@assets/upload-circle-01.svg"
+import assess from "@assets/assess.svg"
+import deleteIt from "@assets/delete.svg"
+import assign from "@assets/Vectorassign.svg"
+import pdf2 from "@assets/Vector (3) - Copy.svg"
+import reject from "@assets/Vectorreject.svg"
+import approved from "@assets/approved.svg"
+import recorded from "@assets/recorded.svg"
 
 
 export {
@@ -54,5 +63,14 @@ export {
   checked,
   cancelled,
   add,
-  chevron2
+  chevron2,
+  iconhorizon,
+  upload,
+  assess,
+  deleteIt,
+  assign,
+  pdf2,
+  reject,
+  approved,
+  recorded
 };
