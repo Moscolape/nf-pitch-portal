@@ -18,6 +18,14 @@ import bell from "@assets/Vectorbell.svg"
 import chevronDown from "@assets/arrow-down-01-sharp.svg"
 import camera from "@assets/camera-01.svg"
 import profilePic from "@assets/Frame 50.svg"
+import message from "@assets/message-01.svg"
+import pdf from "@assets/Vector (3).svg"
+import menuIcon from "@assets/more-vertical-circle-01.svg"
+import checked from "@assets/Vectorchecked.svg"
+import cancelled from "@assets/Vectorcancelled.svg"
+import add from "@assets/Vectoradd.svg"
+import chevron2 from "@assets/chevron2.svg"
+
 
 export {
   Logo,
@@ -39,5 +47,12 @@ export {
   bell,
   chevronDown,
   camera,
-  profilePic
+  profilePic,
+  message,
+  pdf,
+  menuIcon,
+  checked,
+  cancelled,
+  add,
+  chevron2
 };

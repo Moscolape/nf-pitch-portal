@@ -6,7 +6,7 @@ const Navbar = () => {
       <div className="flex items-center">
         <div className="flex mr-5 cursor-pointer">
           <img src={bell} alt="" />
-          <span className="bg-red-600 w-5 h-5 text-white rounded-full text-h12 text-center">0</span>
+          <span className="bg-accented-4 w-5 h-5 text-white rounded-full text-h12 text-center">0</span>
         </div>
         <div className="flex items-center">
           <img src={avatar} alt="" />
