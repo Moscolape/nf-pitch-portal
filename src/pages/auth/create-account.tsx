@@ -7,29 +7,70 @@ import {
   eye,
   eyeSlash,
 } from "@/constants/assets";
+import { countryCodes } from "@/utils/country-codes";
 import { states } from "@/utils/states";
+import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Select, { CSSObjectWithLabel, SingleValue } from "react-select";
+import Flag from "react-world-flags";
+
+interface OptionType {
+  value: string;
+  label: JSX.Element;
+}
 
 const CreateAccount = () => {
   const [passwordVisible, setPasswordVisible] = useState<boolean>(false);
+
+  const options: OptionType[] = countryCodes.map((country) => ({
+    value: country.code,
+    label: (
+      <div style={{ display: "flex", alignItems: "center" }}>
+        <Flag
+          code={country.flag}
+          style={{ width: "20px", height: "15px", marginRight: "10px" }}
+        />
+        {country.flag} ({country.code})
+      </div>
+    ),
+  }));
+
+  const [selectedOption, setSelectedOption] = React.useState<OptionType | null>(
+    options[0]
+  );
+  const [inputValue, setInputValue] = useState<string>("");
+
+  const handleSelectChange = (option: SingleValue<OptionType>) => {
+    setSelectedOption(option);
+  };
+
+  const handleInputChange = (value: string) => {
+    setInputValue(value);
+  };
 
   return (
     <AuthWrapper>
       <div className="flex">
         <div className="mr-5 rounded-2xl bg-gradient-to-b from-[#1E5E3F] to-[#0E2B1D] relative">
           <img src={corper} alt="" />
-          <img src={bottomgradient} alt="" className="absolute bottom-0" />
+          <img
+            src={bottomgradient}
+            alt=""
+            className="absolute bottom-0 rounded-b-2xl"
+          />
           <div className="absolute bottom-32 z-10 w-full flex justify-center items-center">
-            <img src={check} alt="" className="mr-1 mt-2"/>
+            <img src={check} alt="" className="mr-1 mt-2" />
             <div className="mt-3 font-DM-Sans">
-              <span className="text-white text-h12">Do you have an account?</span>
+              <span className="text-white text-h12">
+                Do you have an account?
+              </span>
               <Link to="/">
                 <span className="text-accented-1 font-medium ml-1 text-h12 hover:underline">
                   Login here
                 </span>
               </Link>
-            </div>{" "}
+            </div>
           </div>
         </div>
         <div className="p-10 bg-white rounded-2xl border border-primary-bordered flex flex-col w-[70%]">
@@ -147,19 +188,34 @@ const CreateAccount = () => {
                 >
                   Phone Number
                 </label>
-                <select
-                  id="state"
-                  className="px-4 py-2 border border-gray-2 rounded-full outline-none w-full"
-                >
-                  <option value="">+234</option>
-                </select>
+                <Select
+                  id="country-code-select"
+                  value={selectedOption}
+                  onChange={handleSelectChange}
+                  options={options}
+                  inputValue={inputValue}
+                  onInputChange={handleInputChange}
+                  styles={{
+                    control: (base: CSSObjectWithLabel) => ({
+                      ...base,
+                      minWidth: 170,
+                    }),
+                    menu: (base: CSSObjectWithLabel) => ({
+                      ...base,
+                      zIndex: 9999,
+                      minWidth: 170
+                    }),
+                  }}
+                  onMenuOpen={() => {}}
+                  onMenuClose={() => {}}
+                />
               </div>
-              <div className="mt-12 w-[76%]">
+              <div className="mt-12 w-[72%]">
                 <input
                   type="text"
-                  id="nin"
+                  id="phone"
                   className="px-4 py-2 border border-gray-2 rounded-full outline-none w-full"
-                  placeholder="NIN Number"
+                  placeholder="Phone Number"
                 />
               </div>
             </div>
@@ -212,7 +268,7 @@ const CreateAccount = () => {
               Data Collection and Privacy Policy
             </span>
           </div>
-          <Link to='/verify-email'>
+          <Link to="/verify-email">
             <button
               type="submit"
               className="flex items-center justify-center hover:bg-primary-dark bg-primary text-white py-3 w-1/3 rounded-full mt-5 text-h11 cursor-pointer"

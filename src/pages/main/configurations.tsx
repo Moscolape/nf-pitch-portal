@@ -103,7 +103,7 @@ const PanelConfiguration: React.FC = () => (
           className="px-4 py-2 border rounded-full outline-none w-[85%] mr-5"
           placeholder="5"
         />
-        <button className="bg-primary text-white py-3 w-[15%] rounded-full">
+        <button className="hover:bg-primary-dark bg-primary text-white py-3 w-[15%] rounded-full">
           Update
         </button>
       </div>
